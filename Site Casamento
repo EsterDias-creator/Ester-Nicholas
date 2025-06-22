@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ester & Nicholas - Nosso Casamento</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff5f7;
+      color: #333;
+    }
+
+    header {
+      background: #e89faf;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    nav {
+      background: #fff;
+      text-align: center;
+      padding: 1rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #e89faf;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #e89faf;
+      border-bottom: 2px solid #e89faf;
+      padding-bottom: 5px;
+    }
+
+    .contador {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #e89faf;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #e89faf;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
+  <script>
+    // Contador regressivo
+    const dataCasamento = new Date("2025-12-21T17:00:00-0300").getTime();
+    window.onload = function () {
+      const contador = document.querySelector(".contador");
+      setInterval(() => {
+        const agora = new Date().getTime();
+        const diferenca = dataCasamento - agora;
+        const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+        contador.textContent = `Faltam ${dias} dias para o grande dia!`;
+      }, 1000);
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <h1>Ester & Nicholas</h1>
+    <p>21 de Dezembro de 2025 - Petrópolis/RJ</p>
+    <p class="contador">Carregando contador...</p>
+  </header>
+
+  <nav>
+    <a href="#historia">Nossa História</a>
+    <a href="#detalhes">O Grande Dia</a>
+    <a href="#rsvp">RSVP</a>
+    <a href="#presentes">Presentes</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#recados">Recados</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="historia">
+    <h2>Nossa História</h2>
+    <p>Nos conhecemos em 2022, numa aula de dança. Desde então, vivemos muitos momentos especiais que nos trouxeram até aqui. Agora, queremos celebrar esse amor com você!</p>
+  </section>
+
+  <section id="detalhes">
+    <h2>O Grande Dia</h2>
+    <p><strong>Data:</strong> 21 de Dezembro de 2025</p>
+    <p><strong>Local:</strong> Espaço Villa Serena – Petrópolis/RJ</p>
+    <p><strong>Horário:</strong> Cerimônia às 17h | Festa logo após</p>
+    <p><strong>Traje:</strong> Esporte fino</p>
+    <p><strong>Estacionamento:</strong> Gratuito no local</p>
+    <p><strong>Hospedagem:</strong> Hotel Fazenda Boa Vista (3 min do local)</p>
+  </section>
+
+  <section id="rsvp">
+    <h2>Confirme sua Presença</h2>
+    <form>
+      <div class="form-group">
+        <label>Nome completo:</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Levará acompanhante?</label>
+        <select>
+          <option>Não</option>
+          <option>Sim</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Restrições alimentares?</label>
+        <input type="text">
+      </div>
+      <button type="submit">Confirmar Presença</button>
+    </form>
+  </section>
+
+  <section id="presentes">
+    <h2>Lista de Presentes</h2>
+    <p>Se quiser nos presentear, aqui estão algumas opções:</p>
+    <ul>
+      <li><a href="#">Lista na Loja Fulana</a></li>
+      <li>Chave Pix: <strong>casamentolucaseana@gmail.com</strong></li>
+      <li><a href="#">Contribuir com a Lua de Mel</a></li>
+    </ul>
+  </section>
+
+  <section id="galeria">
+    <h2>Galeria</h2>
+    <p>Em breve: fotos do nosso ensaio e do grande dia!</p>
+  </section>
+
+  <section id="recados">
+    <h2>Deixe seu Recado</h2>
+    <form>
+      <div class="form-group">
+        <label>Seu nome:</label>
+        <input type="text" required>
+      </div>
+      <div class="form-group">
+        <label>Sua mensagem:</label>
+        <textarea rows="4" required></textarea>
+      </div>
+      <button type="submit">Enviar Recado</button>
+    </form>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Fale conosco ou com nossa cerimonialista:</p>
+    <p>Email: casamentolucaseana@gmail.com</p>
+    <p>WhatsApp Cerimonial: (21) 99999-9999</p>
+  </section>
+
+  <footer>
+    <p>Com amor, Ester & Nicholas ❤️</p>
+  </footer>
+
+</body>
+</html>
